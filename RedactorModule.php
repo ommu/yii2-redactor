@@ -46,7 +46,7 @@ class RedactorModule extends \yii\base\Module
         if(!empty($ownerPath))
             $ownerPath = $ownerPath;
 
-        return $ownerPath == $this->subFolderName ? $ownerPath ? $this->subFolderName.'_'.$ownerPath;
+        return $ownerPath == $this->subFolderName ? $ownerPath : $this->subFolderName.'_'.$ownerPath;
     }
 
     /**
