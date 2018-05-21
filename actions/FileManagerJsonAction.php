@@ -4,6 +4,10 @@
  * User: Administrator
  * Date: 5/14/15
  * Time: 12:42 AM
+ * @modified date 21 May 2018, 12:31 WIB
+ * @modified by Putra Sudaryanto <putra@sudaryanto.id>
+ * @contact (+62)856-299-4114
+ * @link https://github.com/ommu/yii2-redactor
  */
 
 namespace yii\redactor\actions;

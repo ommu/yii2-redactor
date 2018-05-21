@@ -1,6 +1,9 @@
 Yii Framework 2 Change Log
 ==========================
 
+2.0.3 under development
+-----------------------
+- [UD] Imperavi redactor updated to 10.2.5
 2.0.2 under development
 -----------------------
 - [UD] Imperavi redactor updated to 10.2.2 (zinzinday)

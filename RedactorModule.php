@@ -16,11 +16,16 @@ use yii\helpers\Url;
 /**
  * @author Nghia Nguyen <yiidevelop@hotmail.com>
  * @since 2.0
+ * @modified date 21 May 2018, 12:31 WIB
+ * @modified by Putra Sudaryanto <putra@sudaryanto.id>
+ * @contact (+62)856-299-4114
+ * @link https://github.com/ommu/yii2-redactor
  */
 class RedactorModule extends \yii\base\Module
 {
     public $controllerNamespace = 'yii\redactor\controllers';
     public $defaultRoute = 'upload';
+    public $subFolderName = 'redactor';
     public $uploadDir = '@webroot/uploads';
     public $uploadUrl = '@web/uploads';
     public $imageUploadRoute = ['/redactor/upload/image'];
@@ -33,9 +38,15 @@ class RedactorModule extends \yii\base\Module
     public $widgetClientOptions=[];
 
 
-    public function getOwnerPath()
+    public function getSubPath()
     {
-        return Yii::$app->user->isGuest ? 'guest' : Yii::$app->user->id;
+        $request = Yii::$app->request;
+        $ownerPath = $request->get('subfolder', $this->subFolderName);
+        $ownerPath = preg_replace('/[^a-zA-Z]/', '', $ownerPath);
+        if(!empty($ownerPath))
+            $ownerPath = $ownerPath;
+
+        return $ownerPath == $this->subFolderName ? $ownerPath ? $this->subFolderName.'_'.$ownerPath;
     }
 
     /**
@@ -45,9 +56,9 @@ class RedactorModule extends \yii\base\Module
      */
     public function getSaveDir()
     {
-        $path = Yii::getAlias($this->uploadDir) . DIRECTORY_SEPARATOR . $this->getOwnerPath();    
+        $path = Yii::getAlias($this->uploadDir) . DIRECTORY_SEPARATOR . $this->getSubPath();
         if(!file_exists($path)){      
-            if (!FileHelper::createDirectory($path, 0775,$recursive = true )) {
+            if (!FileHelper::createDirectory($path, 0775, $recursive = true )) {
                 throw new InvalidConfigException('$uploadDir does not exist and default path creation failed');
             }
         }
@@ -70,6 +81,6 @@ class RedactorModule extends \yii\base\Module
      */
     public function getUrl($fileName)
     {
-        return Url::to($this->uploadUrl . '/' . $this->getOwnerPath() . '/' . $fileName);
+        return Url::to($this->uploadUrl . DIRECTORY_SEPARATOR . $this->getSubPath() . DIRECTORY_SEPARATOR . $fileName);
     }
 }

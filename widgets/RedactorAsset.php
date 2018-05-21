@@ -11,10 +11,14 @@ namespace yii\redactor\widgets;
 /**
  * @author Nghia Nguyen <yiidevelop@hotmail.com>
  * @since 2.0
+ * @modified date 21 May 2018, 12:31 WIB
+ * @modified by Putra Sudaryanto <putra@sudaryanto.id>
+ * @contact (+62)856-299-4114
+ * @link https://github.com/ommu/yii2-redactor
  */
 class RedactorAsset extends \yii\web\AssetBundle
 {
-    public $sourcePath = '@vendor/yiidoc/yii2-redactor/assets';
+    public $sourcePath = '@vendor/ommu/yii2-redactor/assets';
     public $depends = ['yii\web\JqueryAsset'];
 
     public function init()

@@ -10,12 +10,12 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist yiidoc/yii2-redactor "*"
+php composer.phar require --prefer-dist ommu/yii2-redactor "*"
 ```
 
  or
 ```
- "yiidoc/yii2-redactor": "*"
+ "ommu/yii2-redactor": "*"
 ```
 
 to the require section of your composer.json.
@@ -27,7 +27,7 @@ Add to config file (config/web.php or common\config\main.php)
 
 ```
     'modules' => [
-        'redactor' => 'yii\redactor\RedactorModule',
+        'redactor' => 'ommu\redactor\RedactorModule',
     ],
 ```
 or if you want to change the upload directory.
@@ -37,7 +37,7 @@ default value `@webroot/uploads`
 ```
     'modules' => [
         'redactor' => [
-            'class' => 'yii\redactor\RedactorModule',
+            'class' => 'ommu\redactor\RedactorModule',
             'uploadDir' => '@webroot/path/to/uploadfolder',
             'uploadUrl' => '@web/path/to/uploadfolder',
             'imageAllowExtensions'=>['jpg','png','gif']
@@ -52,21 +52,21 @@ reference: [Protect Your Uploads Folder with .htaccess](http://tomolivercv.wordp
 Config view/form
 
 ```
-<?= $form->field($model, 'body')->widget(\yii\redactor\widgets\Redactor::className()) ?>
+<?= $form->field($model, 'body')->widget(\ommu\redactor\widgets\Redactor::className()) ?>
 ```
 
 or not use ActiveField
 
 ```
-<?= \yii\redactor\widgets\Redactor::widget([
+<?= \ommu\redactor\widgets\Redactor::widget([
     'model' => $model,
     'attribute' => 'body'
 ]) ?>
-```    
+```
 or config advanced redactor reference [Docs](http://imperavi.com/redactor/docs/)
 
 ```
-<?= $form->field($model, 'body')->widget(\yii\redactor\widgets\Redactor::className(), [
+<?= $form->field($model, 'body')->widget(\ommu\redactor\widgets\Redactor::className(), [
     'clientOptions' => [
         'imageManagerJson' => ['/redactor/upload/image-json'],
         'imageUpload' => ['/redactor/upload/image'],
@@ -77,7 +77,20 @@ or config advanced redactor reference [Docs](http://imperavi.com/redactor/docs/)
 ])?>
 ```
 
+change default subfolder - optional, name subfolder only [a-zA-Z]
+```
+<?= $form->field($model, 'body')->widget(\ommu\redactor\widgets\Redactor::className(), [
+    'clientOptions' => [
+        'imageManagerJson' => ['/redactor/upload/image-json', 'subfolder' => 'news'], 
+        'imageUpload' => ['/redactor/upload/image', 'subfolder' => 'news'],
+        'fileUpload' => ['/redactor/upload/file', 'subfolder' => 'news'],
+        'lang' => 'zh_cn',
+        'plugins' => ['clips', 'fontcolor','imagemanager']
+    ]
+])?>
+```
+
 Bummer! i was tested on my project but not have many time to write document on file and usage.
-If you have problem please create a [issue](https://github.com/yiidoc/yii2-redactor/issues)
+If you have problem please create a [issue](https://github.com/ommu/yii2-redactor/issues)
 
 Thanks!
