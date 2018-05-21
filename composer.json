@@ -1,34 +1,46 @@
 {
-  "name": "yiidoc/yii2-redactor",
-  "description": "Extension redactor for Yii2 Framework.",
-  "keywords": [
-    "yii2",
-    "extension",
-    "redactor",
-    "WYSIWYG",
-    "html editor",
-    "imperavi"
-  ],
-  "type": "yii2-extension",
-  "license": "BSD-3-Clause",
-  "support": {
-    "issues": "https://github.com/yiidoc/yii2-redactor/issues?state=open",
-    "wiki": "http://www.yiidoc.com/wiki/",
-    "source": "https://github.com/yiidoc/yii2-redactor"
-  },
-  "authors": [
-    {
-      "name": "Nghia Nguyen",
-      "email": "zinzinday@gmail.com"
-    }
-  ],
-  "autoload": {
-    "psr-4": {
-      "yii\\redactor\\": "/"
-    }
-  },
-  "minimum-stability": "dev",
-  "require": {
-    "yiisoft/yii2": "*"
-  }
+	"name": "ommu/yii2-redactor",
+	"description": "Extension redactor for Yii2 Framework.",
+	"keywords": [
+		"yii2",
+		"extension",
+		"redactor",
+		"WYSIWYG",
+		"html editor",
+		"imperavi"
+	],
+	"homepage": "https://github.com/ommu/yii2-redactor",
+	"type": "yii2-extension",
+	"license": "Apache-2.0",
+	"support": {
+		"issues": "https://github.com/ommu/yii2-redactor/issues",
+		"wiki": "https://github.com/ommu/yii2-redactor/wiki",
+		"source": "https://github.com/ommu/yii2-redactor"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ommu/yii2-redactor.git"
+	},
+	"authors": [
+		{
+			"name": "Nghia Nguyen",
+			"email": "zinzinday@gmail.com",
+			"role": "Creator"
+		},
+		{
+			"name": "Putra Sudaryanto",
+			"email": "putra@sudaryanto.id",
+			"homepage": "https://putra.sudaryanto.id",
+			"role": "Modifier"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"ommu\\redactor\\": ""
+		}
+	},
+	"minimum-stability": "dev",
+	"require": {
+		"yiisoft/yii2": "*"
+	}
 }
