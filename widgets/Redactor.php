@@ -55,7 +55,7 @@ class Redactor extends InputWidget
     private $_assetBundle;
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function init()
     {
@@ -66,7 +66,7 @@ class Redactor extends InputWidget
         $this->registerScript();
     }
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function run()
     {
