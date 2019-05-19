@@ -1,17 +1,19 @@
 {
 	"name": "ommu/yii2-redactor",
 	"description": "Extension redactor for Yii2 Framework.",
+	"type": "yii2-extension",
 	"keywords": [
-		"yii2",
 		"extension",
 		"redactor",
 		"WYSIWYG",
 		"html editor",
-		"imperavi"
+		"imperavi",
+		"ommu",
+		"ommu-platform",
+		"yii2"
 	],
-	"homepage": "https://github.com/ommu/yii2-redactor",
-	"type": "yii2-extension",
 	"license": "Apache-2.0",
+	"homepage": "https://github.com/ommu/yii2-redactor",
 	"support": {
 		"issues": "https://github.com/ommu/yii2-redactor/issues",
 		"wiki": "https://github.com/ommu/yii2-redactor/wiki",
@@ -30,17 +32,17 @@
 		{
 			"name": "Putra Sudaryanto",
 			"email": "putra@sudaryanto.id",
-			"homepage": "https://putra.sudaryanto.id",
+			"homepage": "https://sudaryanto.id",
 			"role": "Modifier"
 		}
 	],
+	"minimum-stability": "dev",
+	"require": {
+		"yiisoft/yii2": "*"
+	},
 	"autoload": {
 		"psr-4": {
 			"yii\\redactor\\": "/"
 		}
-	},
-	"minimum-stability": "dev",
-	"require": {
-		"yiisoft/yii2": "*"
 	}
 }
