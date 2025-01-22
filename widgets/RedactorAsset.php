@@ -12,8 +12,8 @@ namespace yii\redactor\widgets;
  * @author Nghia Nguyen <yiidevelop@hotmail.com>
  * @since 2.0
  * @modified date 21 May 2018, 12:31 WIB
- * @modified by Putra Sudaryanto <putra@ommu.co>
- * @contact (+62)856-299-4114
+ * @modified by Putra Sudaryanto <putra@ommu.id>
+ * @contact (+62)811-2540-432
  * @link https://github.com/ommu/yii2-redactor
  */
 class RedactorAsset extends \yii\web\AssetBundle
