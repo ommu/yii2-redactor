@@ -1,7 +1,3 @@
-yii2-redactor
-=============
-Extension redactor for Yii2 Framework.
-
 Installation
 ------------
 
@@ -10,12 +6,12 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist ommu/yii2-redactor "*"
+php composer.phar require --prefer-dist ommu/yii2-redactor "dev-master"
 ```
 
  or
 ```
- "ommu/yii2-redactor": "*"
+ "ommu/yii2-redactor": "dev-master"
 ```
 
 to the require section of your composer.json.
